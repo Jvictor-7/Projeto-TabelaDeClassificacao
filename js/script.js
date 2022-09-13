@@ -11,6 +11,7 @@ function adicionarJogador() {
   };
   jogadores.push(objetoJogadorNovo);
   exibeJogadoresNaTela(jogadores);
+  document.getElementById("nome").value = "";
 }
 
 function removerJogador() {
@@ -19,6 +20,7 @@ function removerJogador() {
     if (jogadores[i].nome === nomeJogador) {
       jogadores.splice(i, 1);
       exibeJogadoresNaTela(jogadores);
+      document.getElementById("nome").value = "";
       break;
     } else {
       continue;
@@ -39,9 +41,9 @@ function exibeJogadoresNaTela(jogadores) {
     elemento += `<td>${jogadores[i].empates}</td>`;
     elemento += `<td>${jogadores[i].derrotas}</td>`;
     elemento += `<td>${jogadores[i].pontos}</td>`;
-    elemento += `<td><button onClick="adicionarVitoria(${i})">Vitória</button></td>`;
-    elemento += `<td><button onClick="adicionarEmpate(${i})">Empate</button></td>`;
-    elemento += `<td><button onClick="adicionarDerrota(${i})">Derrota</button></td>`;
+    elemento += `<td><button class="botaoVitoria" onClick="adicionarVitoria(${i})">Vitória</button></td>`;
+    elemento += `<td><button class="botaoEmpate" onClick="adicionarEmpate(${i})">Empate</button></td>`;
+    elemento += `<td><button class="botaoDerrota" onClick="adicionarDerrota(${i})">Derrota</button></td>`;
     elemento += `</tr>`;
   }
 

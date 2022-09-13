@@ -12,12 +12,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
-  text-align: center;
-  padding: 20px;
-  height: 100vh;
-}
-
 .page-title {
   color: #ffffff;
   margin: 0 0 5px;
@@ -39,18 +33,13 @@ body {
   right: 10px;
 }
 
-table {
-  border: 2px solid white;
-  border-collapse: separate;
-}
-
 h1 {
   color: white;
 }
 
 h3 {
   color: white;
-  margin: 5px;
+  margin: 10px;
 }
 
 .caixaInput {
@@ -67,7 +56,6 @@ input {
 th,
 tr,
 td {
-  border: solid 1px white;
   color: white;
 }
 
@@ -75,16 +63,36 @@ td {
   border-style: none;
   background-color: #404040;
   color: white;
+  box-shadow: 0 0 0.2em white;
 }
 
 .inputButtons>button{
   border-style: none;
   border-radius: 10px;
-  background-color: #404040;
+  background-color: #404040;  
   color: white;
-  box-shadow: 5px 5px 0 #242424;
+  box-shadow: 0 0 0.2em white;
 }
 
-.inputButtons>button:hover{
+.botaoVitoria,.botaoEmpate,.botaoDerrota {
+  border-style: none;
+  border-radius: 10px;
+  background-color: #404040;  
+  color: white;
+  box-shadow: 0 0 0.2em white;
+  width: 60px;
+  padding: 2px;
+}
+
+.inputButtons>button:hover,.botaoVitoria:hover,.botaoEmpate:hover,.botaoDerrota:hover{
   background-color: #909090;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  text-shadow: 0 0 2px #fff;
 }
